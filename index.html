@@ -42,6 +42,13 @@
     .swal2-actions{ flex-direction: column; width: 100%; }
     .swal-btn{ width: 100%; min-width: 0; }
   }
+
+  #pesan10{
+    font-size: clamp(18px, 4.2vw, 28px);
+    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0,0,0,.55);
+    letter-spacing: .2px;
+  }
 </style>
 
 </head>
@@ -148,8 +155,10 @@
   var opstanya = 'Jawab santai aja 😊';
   var tompositif = 'Lanjut dong 😚';
   var tomnegatif = 'Ganti yang lebih lucu 😤';
+
+  const phone = ['62878','30', '957', '591'].join('');
     
-  async function menuju(){const pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah 🥰❤️";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp}
+  async function menuju(){const pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah 🥰❤️";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = `https://api.whatsapp.com/send?phone=${phone}&text=` + pesanwhatsapp}
 </script>
 <script src="https://malasid.github.io/html/hbd.js"></script>
 <script>
