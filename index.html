@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>Happy Birthday</title>
+<link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
+<meta name="description" content="HTML Bucin Malas.id">
+<style>
+  /* Biar tombol confirm & cancel lebarnya sama */
+  .swal-btn{
+    min-width: 180px;        /* samain lebar; bisa diganti 200px, dst */
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    cursor: pointer;
+  }
+  .swal-btn-ok{
+    background: #4f46e5;     /* ungu/biru */
+    color: #fff;
+  }
+  .swal-btn-cancel{
+    background: #ef4444;     /* merah */
+    color: #fff;
+  }
+  /* jarak antar tombol */
+  .swal2-actions{ gap: 12px; }
+
+  /* Responsif: di HP kecil tombol ditumpuk & full width */
+  @media (max-width: 360px){
+    .swal2-actions{ flex-direction: column; width: 100%; }
+    .swal-btn{ width: 100%; min-width: 0; }
+  }
+</style>
+
+</head>
+<body>
+  
+   <!-- Ganti Audio di sini -->
+   <audio src="audio/bg.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="img/bg.png" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="kadoIn">
+       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>
+     </div>
+     <p id="ket">Klik Kadonya!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker"/>
+         <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1"/>
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2"/>
+         <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker3"/>
+         <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker4"/>
+         <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5"/>
+         
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker6"/>
+     </div>
+     
+     <p id="halo" class="halo"></p>
+     
+     <div><blockquote id='bq' data-text='㋡'>
+       <p id="kalimat">Aku ada sesuatu buat kamu 🤭❤️</p>
+
+       <p id="pesan1">Klik 4 LOVE di Bawah! 😆❤️</p>
+       <div id="kolombaru">
+         <li id="lv1">🤍</li>
+         <li id="lv2">🤍</li>
+         <li id="lv3">🤍</li>
+         <li id="lv4">🤍</li>
+       </div>
+
+       <p id="pesan2">Tunggu bentar...</p>
+       <!-- Pesan -->
+       <p id="pesan3">Hehe... ini telat 8 hari, tapi doanya tetap sama tulusnya kokk 🫶</p>
+       <p id="pesan4">Selamat Ulang Tahun, </p>
+       <p id="pesan5" class="gaya2">Semoga yang kamu doakan pelan-pelan jadi kenyataan.</p>
+       <p id="pesan6" class="gaya2">Sehat selalu, dilancarkan urusan, dan dijauhkan dari hal-hal yang bikin sedih. 😆❤️</p>
+       <p id="pesan7" class="gaya2">Makasih yaa buat “bareng ajaa”-nya. Kita jalanin bareng pelan-pelan aja ya 😊</p>
+
+       <p id="pesan8" class="gaya2">Oke siip! Program “bareng ajaa” resmi dimulai. Mulai hari ini aku usahain selalu ada hal kecil yang bikin kamu senyum 😊</p>
+       <p id="pesan9" class="gaya2">Kalau suatu hari kamu capek, inget: kamu nggak sendirian. Ada aku yang dukung dari dekat ✨</p>
+       <p id="pesan10" class="gaya2">Selamat level-up day (versi telat), partner “bareng ajaa”-nya aku 💫</p>
+
+       <!-- Tombol Lanjut -->
+       <p id="opsL">Klik untuk Lanjut</p>
+     </blockquote></div>
+
+     <!-- Tombol Kirim Pesan -->
+     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
+
+     <!-- Pesan Tambahan -->
+     <p id="katatambahan" class="sembunyi">Makasih yaa udah mau nerima effort kecilku ini 🤍</p>
+     
+     <!-- Pesan Ditolak -->
+     <div id="pesanditolak">
+       <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif"/>
+       <p id="kataditolak">Baik~ nanti aku ganti effortnya yang lebih lucu lagi 😜</p>
+     </div>
+
+   </div>
+
+<script>
+  const body = document.querySelector("body");const swalst = Swal.mixin({timer: 2300, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio(linkmp3.src); ftganti=0;fungsi=0;fungsiAwal=0;deffotostiker=fotostiker.src;function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-snowflake"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-snowflake"); if (heartArr.length > 100) {heartArr[0].remove()}},100);Content.style = "opacity:1;margin-top:16vh";
+  const swals = Swal.mixin({
+  allowOutsideClick: false,
+  imageHeight: 80,
+  buttonsStyling: false,
+  customClass: {
+    confirmButton: 'swal-btn swal-btn-ok',
+    cancelButton:  'swal-btn swal-btn-cancel'
+  }
+});
+  const SKIP_SECONDS = 6;
+  audio.loop = true;
+  audio.volume = 0.3;
+  audio.addEventListener('loadedmetadata', () => {
+    audio.currentTime = SKIP_SECONDS;
+  });
+  
+  
+  document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(initengahan,300);setTimeout(inipesan,500)}}
+  
+  async function inipesan(){
+    window.nama = "Diana";
+    vketikhalo="Hai, " + "Diana" + " ✨";
+    mulainama();
+  }
+
+  //Variable Pertanyaan Akhir
+  var tanya = 'Effort kecil gini lanjut terus jangan?';
+  var opstanya = 'Jawab santai aja 😊';
+  var tompositif = 'Lanjut dong 😚';
+  var tomnegatif = 'Ganti yang lebih lucu 😤';
+    
+  async function menuju(){const pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah 🥰❤️";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp}
+</script>
+<script src="https://malasid.github.io/html/hbd.js"></script>
+<script>
+async function pertanyaan(){
+  const { isConfirmed } = await swals.fire({
+    title: tanya,
+    text:  opstanya,
+    imageUrl: fotostiker6.src,
+    showCancelButton: true,
+    confirmButtonText: tompositif,
+    cancelButtonText:  tomnegatif,
+  });
+
+  if (isConfirmed) {
+    await swalst.fire({ title: katatambahan.innerText, timer: 2500, imageUrl: fotostiker1.src }); // pusn.gif
+    // await swalst.fire({ title: katatambahan.innerText, timer: 1800, imageUrl: fotostiker.src  }); // bunga.gif
+    // await swalst.fire({ title: katatambahan.innerText, timer: 1800, imageUrl: fotostiker5.src }); // emawh.gif
+    vketik8 = vketik81;
+  } else {
+    await swalst.fire({ title: kataditolak.innerText, timer: 2500, imageUrl: stikerditolak.src });
+    vketik8 = "";
+  }
+  aktipesan8();
+}
+
+(function patchTypeIt(){
+  const Original = window.TypeIt;
+  const DEFAULTS = { speed: 20, startDelay: 15, waitUntilVisible: true, cursor: true, lifelike: true };
+  window.TypeIt = function(selector, opts){
+    return new Original(selector, Object.assign({}, DEFAULTS, opts || {}));
+  };
+  window.TypeIt.prototype = Original.prototype;
+})();
+
+// --- Skala jeda antar langkah: percepat transisi
+(function patchSetTimeout(){
+  const _setTimeout = window.setTimeout;
+  const TIMING_SCALE = 1;
+  const EXTRA_BASE   = 40;
+  window.setTimeout = function(fn, delay, ...args){
+    const d = (typeof delay === 'number' ? delay : 0);
+    return _setTimeout(fn, Math.max(0, d * TIMING_SCALE + EXTRA_BASE), ...args);
+  };
+})();
+</script>
+</body>
+</html>
