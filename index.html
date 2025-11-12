@@ -198,12 +198,14 @@ async function pertanyaan(){
 function aktipesan5(){
   fthilang(); ftganti = 3; setTimeout(ftmuncul, 300);
   wallpaper.style = "transform: scale(1)";
-  new TypeIt("#pesan5", { strings: [vketik5], startDelay: 1 }) // speed dsb sudah dipatch global
-    .go()
-    .then(() => {
+  new TypeIt("#pesan5", {
+    strings: [vketik5],
+    startDelay: 1,
+    afterComplete: function(){
       pesan5.innerHTML = vketik5;
       setTimeout(aktipesan6, 1000);
-    });
+    }
+  }).go();
 }
 </script>
 </body>
